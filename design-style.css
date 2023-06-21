@@ -1,0 +1,170 @@
+/* styling of the main top section */
+
+.web-top-section{
+    max-width:1111px;
+    min-height:252px;
+    margin: 50px auto;
+    padding:64px 191px;
+    text-align:center;
+    border-radius:10px;
+}
+.web-top-section > .content{
+    max-width:730px;
+}
+.web-top-section > .content > h1{
+    margin-bottom:24px;
+}
+
+/* styling of the background leaf image */
+.bg-leaf-2{
+    top:180px
+}
+
+/* middle section */
+.web-middle-section{
+    max-width:1111px;
+    min-height:988px;
+    margin:130px auto;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-gap:30px;
+}
+.graphic-middle-section{
+    max-width:1111px;
+    min-height:478px;
+    margin:130px auto;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-gap:30px;
+}
+
+
+.express-img, .transfer-img, .photon-img, .builder-img, .blogr-img, .camp-img,
+.airfilter-img, .eyecam-img, .faceit-img, .todo-img, .loopstudios-img,
+.change-img, .boxed-water-img, .science-img{
+    width:100%;
+    height:65%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:10px 10px 0 0;
+
+}
+
+.info{
+    padding:32px;
+    text-align:center;
+    background-color:#FDF3F0;
+    border-radius:0 0 10px 10px;
+}
+.info-heading{
+    margin-bottom:16px;
+    color:#E7816B;
+}
+.info:hover, .info:focus-visible{
+    background-color:#FFAD9B;
+    color:#fff !important;
+    cursor:pointer;    
+}
+.info-heading:hover{
+    color:#fff;
+}
+
+/* Middle Bottom Section */
+.web-middle-bottom-section, .app-middle-bottom-section, .graphic-middle-bottom-section{
+    max-width:1111px;
+    min-height:308px;
+    margin:auto ;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:30px;
+}
+.app-middle-bottom-section{
+    grid-template-areas:
+    "web_design graphic_design";
+}
+.web-middle-bottom-section{
+    grid-template-areas:
+    "app_design graphic_design";
+}
+.graphic-middle-bottom-section{
+    grid-template-areas:
+    "app_design web_design";
+}
+
+/* responsiveness */
+/* tablet*/
+@media only screen and (max-width:821px)
+{
+    .web-top-section{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .web-middle-bottom-section, .app-middle-bottom-section, .graphic-middle-bottom-section{
+        grid-template-columns:1fr;
+        grid-template-rows:repeat(4, 1fr);
+        min-height:500px;
+    }
+    .web-middle-bottom-section{
+        grid-template-areas:
+        "app_design"
+        "app_design"
+        "graphic_design"
+        "graphic_design";
+    }
+    .app-middle-bottom-section{
+        grid-template-areas:
+        "web_design"
+        "web_design"
+        "graphic_design"
+        "graphic_design";
+    }
+    .graphic-middle-bottom-section{
+        grid-template-areas:
+        "web_design"
+        "web_design"
+        "app_design"
+        "app_design";
+    }
+    
+    .web-middle-section, .graphic-middle-section{
+        grid-template-columns:1fr; 
+        grid-gap:50px;
+    }
+
+    .bg-leaf-2{
+        display:none;
+    }
+
+    .express-img, .transfer-img, .photon-img, .builder-img, .blogr-img, .camp-img,
+    .airfilter-img, .eyecam-img, .faceit-img, .todo-img, .loopstudios-img,
+    .change-img, .boxed-water-img, .science-img
+    {
+    height:100%;
+    width:100%;
+    }
+
+    .express, .transfer, .photon, .builder, .blogr, .camp, .airfilter, .eyecam, .faceit, .todo,
+    .loopstudios, .change, .boxed-water, .science{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        
+    }
+    .info{
+        display:grid;
+        place-items:center;
+        place-content:center;
+
+        
+    }
+    @media only screen and (max-width:767px)
+    {
+        .express, .transfer, .photon, .builder, .blogr, .camp, .airfilter, .eyecam, .faceit, .todo,
+        .loopstudios, .change, .boxed-water, .science{
+        grid-template-columns:1fr;
+        
+    }
+    }
+   
+
+}
